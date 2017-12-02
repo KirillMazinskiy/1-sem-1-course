@@ -1,3 +1,53 @@
+#pragma once
+#include<iostream>
+
+using namespace std;
+
+double CountSinN(int n, double sum);
+double fact(int n, double sum);
+void ChoosingPrimer(int m, int n, double sum);
+double CountPrimer1(int n, double sum);
+double CountPrimer2(int n, double sum);
+double CountPrimer3(int n, double sum);
+double CountPrimer4(int n, double sum);
+double CountPrimer5(int n, double sum);
+double CountPrimer6(int n, double sum);
+double CountPrimer7(int n, double sum);
+double CountPrimer8(int n, double sum);
+double CountPrimer9(int n, double sum);
+double CountPrimer10(int n, double sum);
+
+double CountPrimer1(int n, double sum)
+{
+	sum = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		sum += 1 / (double)i;
+	}
+	return sum;
+}
+
+double CountPrimer2(int n, double sum)
+{
+	sum = 1;
+	for (int i = 0; i < n; i++)
+	{
+		sum *= 2;
+	}
+	return sum;
+}
+
+double CountPrimer3(int n, double sum)
+{
+	sum = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		sum *= 1 + 1 / (double)i / (double)i;
+	}
+	return sum;
+}
+
+double CountPrimer4(int n, double sum)
 {
 	sum = 0;
 	for (int i = 1; i <= n ; i++)
