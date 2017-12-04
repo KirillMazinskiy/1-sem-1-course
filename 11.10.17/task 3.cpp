@@ -3,12 +3,13 @@
 
 using namespace std;
 
+
 int main()
 {
-	int num = 0;
-	cout << " Enter fibonachi's number = : " << endl;
+	int num;
+	cout << " Enter digit numbers such as hundredths and etc =  " << endl;
 	cin >> num;
-	cout << fibonachi(num);
+	cout << fibonachiMinOfNum(num);
 	system("pause");
 }
 

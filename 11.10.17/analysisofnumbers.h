@@ -9,6 +9,7 @@ int FindMin(long long a);
 bool AnalyzeForDivisibility(int num);
 void WriteResultOfAnalyzeForDivisibility(int num);
 int fibonachi(int num);
+int fibonachiMinOfNum(int num);
 
 long long CountNumberOfDigits(long long a)
 {
@@ -84,4 +85,20 @@ int fibonachi(int num)
 		rb = sum;
 	}
 	return sum;
+}
+
+int fibonachiMinOfNum(int num)
+{
+	int ra, rb, sum, m;
+	ra = 0, rb = 1, sum = 0, m = 0;
+
+	for (int i = 0; ; i++)
+	{
+		m = sum;
+		sum = ra + rb;
+		ra = rb;
+		rb = sum;
+		if (sum >= num && m >= num && sum - m < num)   break;
+	}
+	return m;
 }
